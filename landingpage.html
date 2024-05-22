@@ -19,7 +19,9 @@
                     </a>
                 </div>
                 <div class="right">
-                    <a href="https://labs.google.com/search?source=ntp" aria-label="Search labs" role="button"><img src="../images/search lab.png" width="24px" height="24px" alt="" focusable="false" ></a>
+                    <div class="grey">
+                        <a href="https://labs.google.com/search?source=ntp" aria-label="Search labs" role="button"><img src="../images/search lab.png" alt="" focusable="false" ></a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -30,6 +32,13 @@
         </div>
         <div id="inputWrapper">
             <input id="input" type="search" autocomplete="off" spellcheck="false" placeholder="Search Google or type a URL">
+            <div class="searchIcon" mask-image="url(//resources/cr_components/searchbox/icons/search_cr23.svg)">
+                <div class="container">
+                    <div id="icon" style="-webkit-mask-image: url(../images/search_cr23.svg);"></div>
+                </div>
+            </div>
+            <button id="voice" class="iconButton"></button>
+            <button id="imageSearch" class="iconButton"></button>
         </div>
     </section>
 </body>

@@ -7,6 +7,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
 }
 img, picture, video, canvas, svg {
   display: block;
@@ -85,10 +86,41 @@ img {
   .links .left a:hover {
     text-decoration: underline;
   }
+
+  .links .right .grey  {
+    
+    outline: none;
+    vertical-align: middle;
+    border-radius: 2px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+    text-decoration: none
+  }
+
+  .links .right .grey  a{
+    padding: 8px;
+    display: inline-block;
+  }
+
+  .links .right .grey img {
+  
+    border-radius: 50%;
+  }
+
+  .links .right .grey:hover {
+      background: #ccccccbb;
+      border-color: #dadce0;
+      color: #174ea6
+  }
+
   .main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
   }
 
   .logo {
@@ -106,5 +138,79 @@ img {
     box-shadow: 0 1px 6px 0 #20212447;
     font-size: 16px;
     border-radius: calc(0.5 * 44px);
-    background: #ffffff;
+    position: relative;
+    
   }
+
+  #input {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: none;
+    border-radius: calc(0.5 * 44px);
+    color: #000000ff;
+    font-family: inherit;
+    font-size: inherit;
+    height: 100%;
+    outline: 0;
+    padding-inline-end: calc(53px + 26px + 8px);
+    padding-inline-start: calc(52px + 0px);
+    background: #ffffff;
+    width: 100%;
+    position: relative;
+  }
+
+  .searchIcon {
+    height: 100%;
+    position: absolute;
+    left: 12px;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+  }
+  .container {
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1/1;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+  }
+  #icon {
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: 20px;
+    background-color: #5f6368ff;
+    height: 24px;
+    width: 24px;
+  }
+  input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration { display: none; }
+
+  .iconButton {
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 21px 21px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  height: 100%;
+  outline: 0;
+  padding: 0;
+  pointer-events: auto;
+  position: absolute;
+  right: 16px;
+  width: 26px;
+}
+#voice {
+  background-image: url(../images/mic.svg);
+  right: 53px;
+}
+#imageSearch {
+  background-image: url(../images/camera.svg);
+}
